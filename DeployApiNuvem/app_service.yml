@@ -1,0 +1,15 @@
+resources:
+  - group: MyResourceGroup
+
+services:
+  - name: MyAPIApp
+    location: eastus
+    properties:
+      serverFarmId: MyAppServicePlan
+      httpsOnly: true
+      siteConfig:
+        appSettings:
+          - name: FLASK_ENV
+            value: production
+          - name: PORT
+            value: 5000
